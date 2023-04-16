@@ -17,6 +17,7 @@ function App() {
     const randomIndex = Math.floor(Math.random() * questions.length);
     const randomQuestion = questions[randomIndex];
     setSelectedQuestion(randomQuestion);
+    setQuestions(prevQuestions => prevQuestions.filter(question => question !== randomQuestion));
   }
 
   return (
